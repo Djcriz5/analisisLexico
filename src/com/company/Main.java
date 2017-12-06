@@ -21,10 +21,10 @@ public class Main {
         ArrayList<Produccion >producciones=new ArrayList<>();
         producciones.add(new Produccion('E',"TX"));
         producciones.add(new Produccion('X',"+TX"));
-        producciones.add(new Produccion('X',"\u03B5"));
+        producciones.add(new Produccion('X',"\u03B5"));//caracter epsilon griego
         producciones.add(new Produccion('T',"FY"));
         producciones.add(new Produccion('Y',"*FY"));
-        producciones.add(new Produccion('Y',"\u03B5"));
+        producciones.add(new Produccion('Y',"\u03B5"));//caracter epsilon griego
         producciones.add(new Produccion('F',"a"));
         producciones.add(new Produccion('F',"(E)"));
         simbolos.put('E',false);
@@ -36,7 +36,7 @@ public class Main {
         simbolos.put('a',true);
         simbolos.put('(',true);
         simbolos.put(')',true);
-        simbolos.put('\u03B5',true);
+        simbolos.put('\u03B5',true);//caracter epsilon griego
         simbolos.put('+',true);
 
         AnalizadorLL1 ll1=new AnalizadorLL1(simbolos,producciones);
